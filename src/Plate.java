@@ -6,7 +6,6 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Plate {
-
   private int food;
 
   public void info() {
