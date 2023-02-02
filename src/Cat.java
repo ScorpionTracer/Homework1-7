@@ -7,19 +7,15 @@ import org.jetbrains.annotations.NotNull;
 @Setter
 @AllArgsConstructor
 public class Cat {
-  private final String name;
-  private final int appetite;
+  private String name;
+  private int appetite;
   private boolean fullAppetite;
 
-  public int getAppetite() {
-    return appetite;
-  }
-
-  public void eat(@NotNull Plate plate) {
+  public void eat(Plate plate) {
     plate.decreaseFood(appetite);
   }
 
-  public boolean checkPlate (int appetite, int food){
-    return food>=appetite;
+  public boolean checkPlate(int appetite, int food) {
+    return food >= appetite;
   }
 }

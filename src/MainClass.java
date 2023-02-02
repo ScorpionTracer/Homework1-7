@@ -2,12 +2,12 @@ public class MainClass {
   public static void main(String[] args) {
     var catOne = new Cat("Barsik", 5, false);
     var plateOne = new Plate(105);
-    plateOne.info();
+    System.out.println(plateOne.toString());
     if (catOne.checkPlate(catOne.getAppetite(), plateOne.getFood())) {
       catOne.eat(plateOne);
       catOne.setFullAppetite(true);
     }
-    plateOne.info();
+    System.out.println(plateOne.toString());
     var catArray = new Cat[3];
     catArray[0] = new Cat("Pidor", 15, false);
     catArray[1] = new Cat("Nepidor", 7, false);
@@ -18,10 +18,10 @@ public class MainClass {
         cat.eat(plateTwo);
         cat.setFullAppetite(true);
       }
-      System.out.println("Cat " + cat.getName() + " fullappetite: " + cat.isFullAppetite());
+      System.out.format("Cat %s fullappetite: %b\n", cat.getName(), cat.isFullAppetite());
     }
     plateTwo.addFood(10);
-    plateTwo.info();
+    System.out.println(plateTwo.toString());
     var catUltrapidor = new Cat("Ultrapidor",100,false);
     catUltrapidor.eat(plateTwo);
   }

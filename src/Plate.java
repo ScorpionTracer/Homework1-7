@@ -8,8 +8,11 @@ import lombok.Setter;
 public class Plate {
   private int food;
 
-  public void info() {
-    System.out.println("plate:" + food);
+  @Override
+  public String toString() {
+    return "Plate{" +
+      "food=" + food +
+      '}';
   }
 
   public void decreaseFood (int appetite) {
